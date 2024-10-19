@@ -1,0 +1,1 @@
+C:\Users\danil\source\repos\Net\Новая папка\QuadEqMauiApp\QuadEqMauiApp\QuadEqMauiApp.csproj;x64

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuadEqMauiApp.MainPage">
+    <StackLayout Orientation="Vertical" Spacing="10" Padding="20" BackgroundColor="#F0F0F0">
+        <Label FontSize="24" TextColor="DarkBlue" Text="Решение квадратного уравнения" HorizontalOptions="Center" />
+
+        <!-- Ввод коэффициентов -->
+        <Label FontSize="18" TextColor="Black" Text="Коэффициенты:" />
+        <Label FontSize="18" TextColor="Black" Text="A" />
+        <Entry FontSize="18" TextColor="Black" x:Name="A" Text="" Keyboard="Numeric"/>
+        <Label FontSize="18" TextColor="Black" Text="B" />
+        <Entry FontSize="18" TextColor="Black" x:Name="B" Text="" Keyboard="Numeric"/>
+        <Label FontSize="18" TextColor="Black" Text="C" />
+        <Entry FontSize="18" TextColor="Black" x:Name="C" Text="" Keyboard="Numeric"/>
+
+        <!-- Выбор отображения дискриминанта -->
+        <StackLayout Orientation="Horizontal">
+            <Label FontSize="18" TextColor="Black" Text="Показать дискриминант" />
+            <Switch x:Name="ShowDiscriminantSwitch" />
+        </StackLayout>
+        <Label FontSize="18" TextColor="Black" x:Name="DiscriminantLabel" IsVisible="False" />
+
+        <!-- Вывод корней -->
+        <Label FontSize="18" TextColor="Black" x:Name="X1">X1 =</Label>
+        <Label FontSize="18" TextColor="Black" x:Name="X2">X2 =</Label>
+
+        <!-- Настройка количества знаков после запятой -->
+        <Label FontSize="18" TextColor="Black" Text="Количество знаков после запятой" />
+        <Stepper x:Name="DecimalPlacesStepper" Minimum="0" Maximum="5" Increment="1" Value="2" />
+        <Label x:Name="DecimalPlacesLabel" FontSize="18" TextColor="Black" Text="Знаков после запятой: 2" />
+
+        <!-- Кнопка для расчета -->
+        <Button FontSize="20" TextColor="White" BackgroundColor="DarkBlue" x:Name="btnSolve" Text="Решить" Clicked="Solve"/>
+    </StackLayout>
+</ContentPage>
